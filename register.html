@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ABOUT</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div id="wrapper">
+
+	<div class="fixed-bg-circle"></div>
+
+	<!-- header -->
+	<header id="header">
+		<div class="in_header">
+			<div class="logo">
+				<div class="img_box">
+					<a href="index.html"><img src="images/logo.png"></a>
+				</div>
+			</div>
+
+			<!-- menu button -->
+			<div class="menu-btn-toggle pointer">
+				<span class="first-bar"></span>
+				<span class="second-bar"></span>
+				<span class="third-bar"></span>
+			</div>	
+		</div>
+
+		<!-- menu list -->
+		<div class="inner">
+			<ul class="menu_list">
+				<li><a href="about.html">about</a></li>
+				<li><a href="work.html">portfolio</a></li>
+				<li><a href="">blog</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div class="section_wrap sub">
+		<section class="section">
+			<div class="container">
+				<p class="title_shadow">admin</p>
+				<div class="sub_container">
+					<div class="sub_title">
+						<h2>게시물 등록</h2>
+						<p class="dot"></p>
+					</div>
+					
+					<!-- 디자인 적용 -->
+					<div class="register_wrap">
+						<form role="form" method="post" autocomplete="off">
+							<div class="input_box">
+								<select class="category1">
+									<option value="">1차 카테고리</option>
+								</select>
+							</div>
+							<div class="input_box">
+								<select class="category1">
+									<option value="">2차 카테고리</option>
+								</select>
+							</div>
+							<div class="input_box">
+								<input type="text" id="brdName" name="brdName" placeholder="게시물 제목">
+							</div>
+							<div class="input_box">
+					   			<input type="text" id="brdLink" name="brdLink" placeholder="게시물 링크연결">
+							</div>
+							<div class="input_box">
+								<p class="tit">상세 설명</p>
+								<textarea rows="10" cols="50" id="brdDes1" name="brdDes1"></textarea>
+							</div>
+							<div class="input_box">
+								<p class="tit">제작 설명</p>
+								<textarea rows="10" cols="50" id="brdDes2" name="brdDes2"></textarea>
+							</div>
+							<div class="file_box">
+								<input type="file" name="attach_file" id="attach_file01" class="upload-hidden">
+								<input name="file_name" class="upload-name" value="" disabled="disabled">
+                                <label for="attach_file01">파일선택</label>
+							</div>
+							<div class="file_box">
+								<input type="file" name="attach_file" id="attach_file01" class="upload-hidden">
+								<input name="file_name" class="upload-name" value="" disabled="disabled">
+                                <label for="attach_file01">파일선택</label>
+							</div>
+
+							<button type="submit" class="login_btn" id="signup_btn" name="signup_btn">register</button>
+
+						</form>
+					</div>
+					<!-- //디자인 적용 -->
+
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<div id="footer">
+		<div class="in_footer">
+			<p>2020 <span>wooara portfolio</span></p>
+		</div>
+	</div>
+
+	<!-- page fix -->
+	<div class="sns_icon">
+		<a href=""><img src="images/github_icon.png"></a>
+		<a href=""><img src="images/mail_icon.png"></a>
+	</div>
+
+	<div class="circle_motion">
+		<div class="circle_left">
+			<div class="img_box">
+				<img src="images/page_circle.png">
+			</div>
+		</div>
+		<div class="circle_right">
+			<div class="img_box">
+				<img src="images/page_circle.png">
+			</div>
+		</div>
+	</div>
+	<!-- //page fix -->
+</div>
+
+<script src="js/jquery.1.12.4.min.js"></script>
+<script type="text/javascript" src="js/site_function.js"></script>
+<script>
+    jQuery(document).ready(function() {
+        //파일첨부 경로 표시
+		var fileTarget = $('.file_box .upload-hidden');
+		fileTarget.on('change', function(){ // 값이 변경되면
+		  if(window.FileReader){ // modern browser
+			var filename = $(this)[0].files[0].name;
+		  } else { // old IE
+			var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+		  }
+		  // 추출한 파일명 삽입
+		  $(this).siblings('.upload-name').val(filename);
+		});
+    });
+</script>
+
+</body>
+</html>
