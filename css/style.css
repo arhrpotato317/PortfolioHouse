@@ -989,3 +989,87 @@ body.nav-on .menu_list li {
 .skill_list li:last-child {
 	margin-right: 0;
 }
+
+/******************************
+	sign up
+******************************/
+
+.login_wrap {
+	width: 420px;
+	margin: 0 auto;
+}
+
+.input_box {
+	margin-bottom: 15px;
+}
+
+.input_box input {
+	width: 100%;
+	height: 47px;
+	border: 1px solid #333;
+	box-sizing: border-box;
+	padding: 0 3%;
+}
+
+.input_box input::placeholder {
+	font-size: 1rem;
+	font-weight: 400;
+	color: #c5c5c5;
+	padding-left: 35px;
+}
+
+.input_box.userId input::placeholder {
+	background: url("../images/mail.png") center left no-repeat;
+}
+.input_box.userPass input::placeholder {
+	background: url("../images/lock.png") center left no-repeat;
+}
+.input_box.userName input::placeholder {
+	background: url("../images/person.png") center left no-repeat;
+}
+.input_box.userPhone input::placeholder {
+	background: url("../images/phone.png") center left no-repeat;
+}
+
+.login_btn {
+	width: 100%;
+	padding: 20px 0;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 1.125rem;
+	font-weight: 700;
+	margin-top: 35px;
+}
+
+.go_signup {
+	border-top: 1px solid #dcdcdc;
+	margin-top: 20px;
+	padding-top: 50px;
+	font-size: 0;
+}
+
+.go_signup .text {
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(100% - 148px);
+	font-size: 1rem;
+	font-weight: 400;
+	color: #777;
+	line-height: 1.4;
+}
+
+.go_signup .link {
+	display: inline-block;
+	vertical-align: middle;
+	width: 148px;
+	border: 1px solid #333;
+	box-sizing: border-box;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #777;
+	padding: 13px 0;
+	text-align: center;
+}
