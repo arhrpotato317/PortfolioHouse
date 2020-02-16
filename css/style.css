@@ -895,6 +895,31 @@ body.nav-on .menu_list li {
 	margin-top: -118px;
 }
 
+/* 관리자 페이지 버튼 */
+.admin_btn {
+	margin-top: 50px;
+}
+
+.admin_btn button {
+	width: 100px;
+	padding: 10px 0;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+
+.admin_btn .modify_btn {
+	background-color: #07368b;
+	margin-right: 7px;
+}
+
+.admin_btn .delete_btn {
+	background-color: #a70000;
+}
+
+
 /******************************
 	about
 ******************************/
